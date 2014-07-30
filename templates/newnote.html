@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block content%}
+{% load staticfiles %}
+
+<head>
+        <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+</head>
+<big><big><big>New Note for Patient </big></big></big>{last_name, first_name}<br><big><big><br></big></big>
+<br>
+<br>
+<br>
+
+<form method='post' action=''> {%csrf_token%}
+
+    {{form.as_p}}
+    {{ NoteForm.media }}
+    <input type='submit'> <br>
+</form>
+{% endblock %}
